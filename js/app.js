@@ -91,7 +91,7 @@ class IU {
       // Boton para borrar el gasto
       const btnBorrar = document.createElement("button");
       btnBorrar.classList.add("btn", "btn-danger", "borrar-gasto");
-      btnBorrar.innerHTML = "Borrar &times";
+      btnBorrar.innerHTML = "Delete &times";
       btnBorrar.onclick = () => {
         eliminarGasto(id);
       };
@@ -131,7 +131,7 @@ class IU {
 
     // Si el total es 0 o menor
     if (restante <= 0) {
-      ui.imprimirAlerta("El presupuesto se ha agotado", "error");
+      ui.imprimirAlerta("The budget has been finished", "error");
 
       formulario.querySelector('button[type="submit"]').disabled = true;
     }
@@ -145,7 +145,7 @@ let presupuesto;
 // Funciones
 
 function preguntarPresupuesto() {
-  const presupuestoUsuario = prompt("Cual es tu presupuesto?");
+  const presupuestoUsuario = prompt("What is your budget?");
 
   //console.log(parseFloat(presupuestoUsuario));
 
@@ -175,11 +175,11 @@ function agregarGasto(e) {
 
   // Validar
   if (nombre === "" || cantidad === "") {
-    ui.imprimirAlerta("Ambos campos son obligatorios", "error");
+    ui.imprimirAlerta("Both files are required.", "error");
 
     return;
   } else if (cantidad <= 0 || isNaN(cantidad)) {
-    ui.imprimirAlerta("Cantidad no válida", "error");
+    ui.imprimirAlerta("Invalid quantity.", "error");
 
     return;
   }
@@ -191,7 +191,7 @@ function agregarGasto(e) {
   presupuesto.nuevoGasto(gasto);
 
   // Mensaje de todo bien!
-  ui.imprimirAlerta("Gasto agregado Correctamente");
+  ui.imprimirAlerta("Expense added successfully");
 
   // Imprimir los gastos
   const { gastos, restante } = presupuesto;
