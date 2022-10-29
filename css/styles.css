@@ -112,7 +112,8 @@ p {
 .hero {
   min-height: calc(100vh - 60px);
   background-color: #fff;
-  /*   background: url("./images/hero-bcg.jpeg") center/cover no-repeat; */
+  background: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTE1MiA4NjYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CjxyZWN0IHg9IjExNDkuMzEiIHk9Ii0zMDMuMDk5IiB3aWR0aD0iMTIyMC4yMSIgaGVpZ2h0PSIxNTk0LjY2IiB0cmFuc2Zvcm09InJvdGF0ZSg3Ni41ODM3IDExNDkuMzEgLTMwMy4wOTkpIiBmaWxsPSJ1cmwoI3BhaW50MF9saW5lYXIpIi8+CjxwYXRoIGQ9Ik0tMjg4IDI2MEwtMjY0IDI4MS4zQy0yNDAgMzAzIC0xOTIgMzQ1IC0xNDQgMzQ1LjNDLTk2IDM0NSAtNDggMzAzIDAgMzI0QzQ4IDM0NSA5NiA0MzEgMTQ0IDQ0MS4zQzE5MiA0NTIgMjQwIDM4OCAyODggMzgyLjdDMzM2IDM3NyAzODQgNDMxIDQzMiA0MjBDNDgwIDQwOSA1MjggMzM1IDU3NiAzMDIuN0M2MjQgMjcxIDY3MiAyODEgNzIwIDMwOEM3NjggMzM1IDgxNiAzNzcgODY0IDM5My4zQzkxMiA0MDkgOTYwIDM5OSAxMDA4IDM3MkMxMDU2IDM0NSAxMTA0IDMwMyAxMTI4IDI4MS4zTDExNTIgMjYwVjU0OEgxMTI4QzExMDQgNTQ4IDEwNTYgNTQ4IDEwMDggNTQ4Qzk2MCA1NDggOTEyIDU0OCA4NjQgNTQ4QzgxNiA1NDggNzY4IDU0OCA3MjAgNTQ4QzY3MiA1NDggNjI0IDU0OCA1NzYgNTQ4QzUyOCA1NDggNDgwIDU0OCA0MzIgNTQ4QzM4NCA1NDggMzM2IDU0OCAyODggNTQ4QzI0MCA1NDggMTkyIDU0OCAxNDQgNTQ4Qzk2IDU0OCA0OCA1NDggMCA1NDhDLTQ4IDU0OCAtOTYgNTQ4IC0xNDQgNTQ4Qy0xOTIgNTQ4IC0yNDAgNTQ4IC0yNjQgNTQ4SC0yODhWMjYwWiIgZmlsbD0iI0Y3RjhGQSIvPgo8cmVjdCB4PSIzLjA1MTc2ZS0wNSIgeT0iNTQ4IiB3aWR0aD0iMTE1MiIgaGVpZ2h0PSIzMTgiIGZpbGw9IiNGN0Y4RkEiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhciIgeDE9IjEzNjEuMDciIHkxPSIyOTAuMDMzIiB4Mj0iMjAzOC41NCIgeTI9Ijc0My41NDQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iI0Y3RjhGQSIgc3RvcC1vcGFjaXR5PSIwLjA2Ii8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0Y3RjhGQSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo=")
+    center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,7 +126,7 @@ p {
 .banner-title {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2rem;
-  font-weight: 200;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: var(--mainSpacing);
   margin-bottom: 3rem;
@@ -145,7 +146,7 @@ p {
 
 @media screen and (max-width: 767px) {
   .banner-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
     letter-spacing: var(--mainSpacing);
     margin-bottom: 3rem;
@@ -154,6 +155,8 @@ p {
   .banner-paragraph {
     font-size: 1rem;
     letter-spacing: var(--mainSpacing);
+    padding: 2px;
+    text-align: center;
   }
 
   .banner-paragraph2 {
@@ -223,7 +226,7 @@ p {
 }
 
 .menu a:hover {
-  color: var(--white-color);
+  color: #a56487fa;
   background-color: var(--first-color);
 }
 
@@ -256,7 +259,7 @@ p {
 .img-container {
   max-width: 50%;
   max-height: auto;
-  margin-top: -80px;
+  margin-top: -140px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -264,9 +267,9 @@ p {
 
 @media screen and (max-width: 727px) {
   .img-container {
-    margin-top: -100px;
+    margin-top: -20px;
     max-height: 100%;
-    max-width: 70%;
+    max-width: 90%;
     border-radius: 1px;
     display: block;
     margin-left: auto;
@@ -582,11 +585,11 @@ y dice software developer
   }
   .text-container-flex-1 {
     font-size: 1.5rem;
-    margin-right: 150px;
+    margin-right: 200px;
   }
   .text-container-flex {
     font-size: 1.1rem;
-    margin-right: 150px;
+    margin-right: 200px;
   }
 }
 
@@ -601,3 +604,10 @@ y dice software developer
 }
 
 /* ******** Flex container ******** */
+
+/* ******** Footer ******** */
+footer {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+/* ******** End Footer ******** */
