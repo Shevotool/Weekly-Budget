@@ -6,6 +6,7 @@ body {
 header {
   margin: 30px 0;
 }
+
 .contenido {
   padding: 20px;
 }
@@ -35,4 +36,55 @@ h2 {
   color: #004e92;
   font-size: 22px;
   margin-bottom: 30px;
+}
+
+/* Queries */
+
+@media screen and (max-width: 767px) {
+  .container {
+    margin-top: 7vh;
+  }
+
+  .text-center {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .btn-width {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .container {
+    margin-top: 20vh;
+  }
+
+  .btn-width {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    margin-top: 20vh;
+  }
+
+  .text-center {
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .btn-width {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+  }
 }
