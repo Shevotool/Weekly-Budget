@@ -7,7 +7,7 @@
 
 ### General Info
 ***
-This wonderful wep application helps you to manage your budget.
+This wonderful web application helps you to manage your budget.
 ### Screenshot!
 
 ## Technologies
