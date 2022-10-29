@@ -14,5 +14,7 @@ This wonderful web application helps you to manage your budget.
 ***
 A list of technologies used within the project:
 * [JavaScript]([https://example.com](https://developer.mozilla.org/es/docs/Web/JavaScript)): ECMAScript 2021 
+* [HTML, CSS]
+* [Tailwind CSS]
 
 ![GitHub Org's stars](https://img.shields.io/github/stars/shevotool?style=social)
