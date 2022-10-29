@@ -1,0 +1,603 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* ***** header ***** */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,300&family=Space+Mono:wght@700&display=swap");
+/* ******** Custom Properties ******** */
+/* ******** Custom Properties ******** */
+:root {
+  --dark-color: #222;
+  --first-color: #674a68;
+  /* Letras y botones */
+  --first-alpha-color: #e53170;
+  --second-color: #f7e2eefa;
+  /* Cabecera */
+  --second-alpha-color: rgba(20, 25, 45, 0.75);
+  --third-color: #501464;
+  --third-alpha-color: rgba(80, 20, 100, 0.75);
+  --white-color: #fff;
+  --gray-light-color: #f3f3f3;
+  --gray-color: #ccc;
+  --dark-gray-color: #666;
+  --black-color: #000;
+  --link-color: #509ee3;
+  --title-color: #333;
+  --text-color: #222;
+  --white-alpha-color: rgba(255, 255, 255, 0.5);
+  --black-alpha-color: rgba(0, 0, 0, 0.5);
+  --font: "Raleway", sans-serif;
+  --max-width: 1000px;
+  --header-height: 4rem;
+}
+
+/* ******** Reset ******** */
+html {
+  box-sizing: border-box;
+  font-family: var(--font);
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+  transition: all 0.5s ease-out;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+h5 {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+h6 {
+  margin: 0;
+  font-size: 0.7rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* ******** Components ******** */
+
+/* ********** HeroImage ********** */
+
+.hero {
+  min-height: calc(100vh - 60px);
+  background-color: #fff;
+  /*   background: url("./images/hero-bcg.jpeg") center/cover no-repeat; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner {
+  text-align: center;
+  display: inline-block;
+  padding: 2rem;
+}
+.banner-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 3rem;
+}
+
+.banner-paragraph {
+  font-size: 1.1rem;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: -10px;
+}
+
+.banner-paragraph2 {
+  font-size: 0.9rem;
+  color: var(--dark-gray-color);
+  letter-spacing: var(--mainSpacing);
+}
+
+@media screen and (max-width: 767px) {
+  .banner-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    margin-bottom: 3rem;
+  }
+
+  .banner-paragraph {
+    font-size: 1rem;
+    letter-spacing: var(--mainSpacing);
+  }
+
+  .banner-paragraph2 {
+    font-size: 0.9rem;
+    color: var(--dark-gray-color);
+    letter-spacing: var(--mainSpacing);
+  }
+}
+.banner-btn {
+  margin-top: 40px;
+  padding: 1rem 1.5rem;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+  background: #1d4ed8;
+  color: #fff;
+  border: 1px solid #1e40af;
+  border-radius: 5px;
+  transition-duration: 1s;
+  cursor: pointer;
+}
+.banner-btn:hover {
+  background: transparent;
+  background: #1e40af;
+  color: #fff;
+}
+
+/* ********** End HeroImage ********** */
+
+/* ******** Menu ******** */
+.menu-btn {
+  outline: thin solid var(--first-color);
+  border: 0;
+  cursor: pointer;
+  background-color: var(--second-color);
+}
+
+.menu-btn svg {
+  fill: var(--first-color);
+}
+
+.menu {
+  position: fixed;
+  left: 0;
+  bottom: var(--header-height);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.55rem;
+  background-color: var(--second-color);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.menu.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu a {
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 200;
+  text-align: center;
+  text-decoration: none;
+  color: var(--first-color);
+}
+
+.menu a:hover {
+  color: var(--white-color);
+  background-color: var(--first-color);
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .menu {
+    position: static;
+    width: auto;
+    flex-direction: row;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .menu a {
+    padding: 0 1rem;
+  }
+
+  .menu a:last-child {
+    padding-right: 0;
+  }
+
+  .menu a:hover {
+    background-color: transparent;
+  }
+}
+/* ******** img container ******** */
+.img-container {
+  max-width: 50%;
+  max-height: auto;
+  margin-top: -80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 727px) {
+  .img-container {
+    margin-top: -100px;
+    max-height: 100%;
+    max-width: 70%;
+    border-radius: 1px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ******** end img container ******** */
+
+/* ******** Utilities ******** */
+
+.bg-gray-light {
+  background-color: var(--gray-light-color);
+}
+
+.box-shadow-1 {
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+.btn {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: inline-block;
+  width: 200px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: var(--white-color);
+  background-color: var(--first-color);
+}
+
+.btn-get {
+  border: none;
+  margin-top: -0.205rem;
+  padding: 6px 15px;
+  border-radius: 4px;
+  background-color: #1d4ed8;
+  border-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  color: #ffff;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .btn-get {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .btn-get {
+    display: none;
+  }
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--max-width);
+}
+
+.gray-scale {
+  filter: grayscale(1);
+}
+
+.none {
+  display: none;
+}
+
+.section {
+  padding: 2rem 1rem;
+}
+
+.section-title {
+  border-top: thin solid var(--first-color);
+  border-bottom: thin solid var(--first-color);
+  margin: 2rem auto;
+  padding: 0.5rem 1rem;
+  width: 240px;
+  text-align: center;
+  color: var(--title-color);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+@media screen and (min-width: 1024px) {
+  .full-lg-screen {
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .text-lg-center {
+    text-align: center;
+  }
+
+  .text-lg-left {
+    text-align: left;
+  }
+
+  .text-lg-right {
+    text-align: right;
+  }
+}
+
+/* ******** Site Styles ******** */
+
+.header {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  padding: 1rem;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--second-color);
+}
+
+.header > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  color: var(--first-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .services > .container {
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  .services .section-title {
+    grid-column: span 2;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  .header {
+    position: sticky;
+    top: 0;
+    padding: 0.5rem;
+    height: calc(var(--header-height) - 0.5rem);
+  }
+
+  .services > .container {
+    grid-template-columns: repeat(3, 30%);
+  }
+
+  .services .section-title {
+    grid-column: span 3;
+  }
+}
+
+/* ******** Service CSS ******** */
+/* Este es el codigo  de my service que parece que se sobreescribe
+y dice software developer
+*/
+.wrapper {
+  height: 4vh;
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+}
+
+.typing-demo {
+  width: 24ch;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 1.35rem;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* ******** Service CSS ******** */
+
+/* ******** DarkThemeButton ******** */
+.dark-theme-btn {
+  position: fixed;
+  z-index: 999;
+  bottom: 13vh;
+  left: 1vw;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: var(--first-color);
+  color: var(--second-color);
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  transition: all 0.3s ease-out;
+}
+
+.dark-theme-btn:hover {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+}
+
+.dark-mode {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+}
+
+/* ******** DarkThemeButton ******** */
+
+/********** Estilos para el main de la página **********/
+/* ***** end header ***** */
+
+/* ******** Flex container ******** */
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* ******** Version Movile ******** */
+
+@media screen and (max-width: 767px) {
+  .flex-item-left {
+    background-color: #fffffe;
+    padding: 20px;
+    flex: 50%;
+  }
+
+  .flex-item-right {
+    background-color: #fffffe;
+    padding: 20px;
+    flex: 50%;
+  }
+
+  .text-container-flex {
+    font-size: 1rem;
+  }
+}
+/* ******** End Version Movile ******** */
+
+/* ******** Version Tablet ******** */
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .flex-item-left {
+    background-color: #fffffe;
+    padding: 20px;
+    flex: 50%;
+  }
+
+  .flex-item-right {
+    background-color: #fffffe;
+    padding: 20px;
+    flex: 50%;
+  }
+
+  .text-container-flex {
+    font-size: 1rem;
+    margin-right: 100px;
+  }
+}
+
+/* ******** End Version Tablet ******** */
+
+/* ******** Version Desktop ******** */
+
+@media screen and (min-width: 1024px) {
+  .flex-item-left {
+    padding: 20px;
+    flex: 50%;
+  }
+
+  .flex-item-right {
+    padding: 20px;
+    flex: 50%;
+  }
+  .text-container-flex-1 {
+    font-size: 1.5rem;
+    margin-right: 150px;
+  }
+  .text-container-flex {
+    font-size: 1.1rem;
+    margin-right: 150px;
+  }
+}
+
+/* ******** Version Desktop ******** */
+
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .flex-item-right,
+  .flex-item-left {
+    flex: 100%;
+  }
+}
+
+/* ******** Flex container ******** */
