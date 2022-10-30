@@ -129,13 +129,13 @@ p {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: var(--mainSpacing);
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .banner-paragraph {
   font-size: 1.1rem;
   letter-spacing: var(--mainSpacing);
-  margin-bottom: -10px;
+  margin-bottom: 18px;
 }
 
 .banner-paragraph2 {
@@ -270,16 +270,17 @@ p {
   .menu a:hover {
     background-color: transparent;
   }
+  .img-container {
+    max-height: 100%;
+    max-width: 50%;
+    margin-top: -100px;
+    border-radius: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 /* ******** img container ******** */
-.img-container {
-  max-height: 100%;
-  max-width: 50%;
-  margin-top: -100px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 @media screen and (max-width: 727px) {
   .img-container {
@@ -292,7 +293,7 @@ p {
     margin-top: -400px;
     max-height: 100%;
     max-width: 80%;
-    border-radius: 1px;
+    border-radius: 15px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -352,6 +353,7 @@ p {
     margin-right: auto;
     height: 320px;
     width: 180px;
+    border-radius: 18px;
   }
 }
 
@@ -366,6 +368,7 @@ p {
     display: block;
     margin-top: -150px;
     margin-left: 82%;
+    border-radius: 10px;
   }
 }
 
@@ -431,8 +434,9 @@ p {
     height: 380px;
     width: auto;
     display: block;
-    margin-top: -270px;
-    margin-left: 72%;
+    margin-top: -280px;
+    margin-left: 71.5%;
+    border-radius: 18px;
   }
 }
 
@@ -617,6 +621,10 @@ y dice software developer
     margin-top: 120px;
     margin-left: -20px;
   }
+
+  .logo-header {
+    display: none;
+  }
 }
 /* ******** End Version Movile ******** */
 
@@ -647,6 +655,10 @@ y dice software developer
     margin-top: 120px;
     margin-left: 30px;
   }
+
+  .logo-header {
+    display: none;
+  }
 }
 
 /* ******** End Version Tablet ******** */
@@ -670,6 +682,15 @@ y dice software developer
   .text-container-flex {
     font-size: 1.1rem;
     margin-right: 200px;
+  }
+
+  .logo-header {
+    position: absolute;
+    height: 230px;
+    width: auto;
+    display: block;
+    margin-top: -60px;
+    margin-left: 54%;
   }
 }
 
