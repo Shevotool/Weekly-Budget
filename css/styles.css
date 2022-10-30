@@ -177,6 +177,22 @@ p {
   transition-duration: 1s;
   cursor: pointer;
 }
+
+@media screen and (max-width: 767px) {
+  .banner-btn {
+    margin-top: 40px;
+    padding: 1rem 0.5rem;
+    letter-spacing: 0.5px;
+    font-size: 0.8rem;
+    background: #1d4ed8;
+    color: #fff;
+    border: 1px solid #1e40af;
+    border-radius: 5px;
+    transition-duration: 1s;
+    cursor: pointer;
+  }
+}
+
 .banner-btn:hover {
   background: transparent;
   background: #1e40af;
@@ -259,7 +275,7 @@ p {
 .img-container {
   max-height: 100%;
   max-width: 50%;
-  margin-top: -140px;
+  margin-top: -100px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -267,7 +283,13 @@ p {
 
 @media screen and (max-width: 727px) {
   .img-container {
-    margin-top: -50px;
+    display: none;
+  }
+}
+
+@media screen and (min-width: 727px) and (max-width: 1023px) {
+  .img-container {
+    margin-top: -400px;
     max-height: 100%;
     max-width: 80%;
     border-radius: 1px;
@@ -275,17 +297,9 @@ p {
     margin-left: auto;
     margin-right: auto;
   }
-}
 
-@media screen and (min-width: 727px) and (max-width: 1023px) {
-  .img-container {
-    margin-top: -250px;
-    max-height: 100%;
-    max-width: 80%;
-    border-radius: 1px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  .banner {
+    margin-top: -400px;
   }
 }
 
@@ -332,11 +346,12 @@ p {
   }
 
   .budget-smart {
-    height: 140px;
-    width: auto;
     display: block;
-    margin-top: -70px;
-    margin-left: 73%;
+    margin-top: -30px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 320px;
+    width: 180px;
   }
 }
 
@@ -413,7 +428,7 @@ p {
   }
 
   .budget-smart {
-    height: 340px;
+    height: 380px;
     width: auto;
     display: block;
     margin-top: -270px;
@@ -553,6 +568,19 @@ y dice software developer
 /********** Estilos para el main de la página **********/
 /* ***** end header ***** */
 
+/* ***** Hero Svh ******/
+
+.hero-svg {
+  position: absolute;
+  height: 160px;
+  width: auto;
+  display: block;
+  margin-top: 40px;
+  margin-left: 0%;
+}
+
+/* ***** Hero Svh ******/
+
 /* ******** Flex container ******** */
 
 .flex-container {
@@ -581,6 +609,14 @@ y dice software developer
   .text-container-flex {
     font-size: 1rem;
   }
+
+  .hero-svg {
+    position: absolute;
+    height: 100px;
+    width: auto;
+    margin-top: 120px;
+    margin-left: -20px;
+  }
 }
 /* ******** End Version Movile ******** */
 
@@ -602,6 +638,14 @@ y dice software developer
   .text-container-flex {
     font-size: 1rem;
     margin-right: 100px;
+  }
+
+  .hero-svg {
+    position: absolute;
+    height: 150px;
+    width: auto;
+    margin-top: 120px;
+    margin-left: 30px;
   }
 }
 
