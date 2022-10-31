@@ -123,26 +123,6 @@ p {
   display: inline-block;
   padding: 2rem;
 }
-.banner-title {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: var(--mainSpacing);
-  margin-bottom: 4rem;
-}
-
-.banner-paragraph {
-  font-size: 1.1rem;
-  letter-spacing: var(--mainSpacing);
-  margin-bottom: 18px;
-}
-
-.banner-paragraph2 {
-  font-size: 0.9rem;
-  color: var(--dark-gray-color);
-  letter-spacing: var(--mainSpacing);
-}
 
 @media screen and (max-width: 767px) {
   .banner-title {
@@ -166,7 +146,7 @@ p {
   }
 }
 .banner-btn {
-  margin-top: 40px;
+  margin-top: 70px;
   padding: 1rem 1.5rem;
   letter-spacing: 0.5px;
   font-size: 1rem;
@@ -576,11 +556,11 @@ y dice software developer
 
 .hero-svg {
   position: absolute;
-  height: 160px;
+  height: 142px;
   width: auto;
   display: block;
-  margin-top: 40px;
-  margin-left: 0%;
+  margin-top: 100px;
+  margin-left: -1%;
 }
 
 /* ***** Hero Svh ******/
@@ -686,11 +666,36 @@ y dice software developer
 
   .logo-header {
     position: absolute;
-    height: 230px;
+    height: 220px;
     width: auto;
     display: block;
-    margin-top: -60px;
-    margin-left: 54%;
+    margin-top: -13px;
+    margin-left: 37%;
+  }
+
+  .banner-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    margin: 16px;
+    margin-top: -20px;
+    margin-bottom: 40px;
+  }
+
+  .banner-paragraph {
+    width: 700px;
+    font-size: 1.2rem;
+    letter-spacing: var(--mainSpacing);
+    margin: 16px;
+  }
+
+  .banner-paragraph2 {
+    font-size: 0.9rem;
+    color: var(--dark-gray-color);
+    letter-spacing: var(--mainSpacing);
+    margin: 16px;
   }
 }
 
