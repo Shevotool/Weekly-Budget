@@ -1,123 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="Author: Andres" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <title>Easy Budget</title>
-  </head>
-  <body>
-    <header class="header">
-      <section class="container">
-        <div class="logo">
-          <a href="index.html">Easy Budget</a>
-        </div>
-        <button class="menu-btn" id="buttonTitle" title="Title">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z" />
-          </svg>
-          <svg
-            class="none"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z"
-            />
-          </svg>
-        </button>
-        <nav class="menu" data-dark>
-          <a href="#inicio">Features</a>
-          <a href="#">Pricing</a>
-          <a href="#">Docs</a>
-          <a href="#">Blog</a>
-          <a href="#">Account</a>
-          <button class="btn-get">Get Started</button>
-        </nav>
-      </section>
-    </header>
 
-    <!--  Hero Image -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/queries.css" />
+  <title>MoneyMate</title>
+</head>
 
-    <header class="hero">
-      <div class="banner">
-        <h1 class="banner-title">Enjoy managing your finances</h1>
-        <!-- End Hero Image -->
-        <img src="./images/graph-man.svg" class="hero-svg" alt="Graph man" />
-        <p class="banner-paragraph container">
-          Easy Budget is a super fast privacy-focused app for managing your
-          finances.Your own your data, we will sync it across all devices with
-          end-to-end encryption.
-        </p>
-        <img
-          src="./images/Easy-Budget.png"
-          class="logo-header"
-          alt="Logo Header"
-          width="220"
-          height="110"
-        />
-        <a href="budget.html">
-          <button class="banner-btn">Try our Demo</button>
-        </a>
-        <p class="banner-paragraph2">
-          Available for web, macOS, Windows, Linux, iOS, Android
-        </p>
+<body data-dark>
+  <!-- Navigation bar -->
+  <header class="header" data-dark>
+    <section class="container">
+      <div class="logo">
+        <a href="index.html"><img src="images/MONEYMATE.svg" alt="Money Mate Tech solutions" class="moneymate"></a>
       </div>
-    </header>
-
-    <!-- Container Image -->
-    <div class="img-container">
-      <img src="./images/budget.jpg" class="box-shadow-1" alt="Budget App" />
-    </div>
-    <!-- End Container Image -->
-    <img
-      src="./images/budget-smart.jpg"
-      class="box-shadow-1 budget-smart"
-      alt="Budget App"
-      height="400"
-      width="200"
-    />
-    <!--   Flex Container -->
-    <section>
-      <br />
-      <br />
-      <div class="flex-container" id="About">
-        <div class="flex-item-left">
-          <img
-            src="./images/succes.png"
-            alt="elements"
-            style="max-width: 100%"
-          />
-        </div>
-        <div class="flex-item-right">
-          <h2 class="text-container-flex-1">
-            Be involved in your financial decisions
-          </h2>
-          <p class="text-container-flex">
-            Automated finance tools are great, except when they aren’t. We
-            provide your with tools that are quick to use, but ultimately you
-            are in control. We help you learn, instead of dictating.
-          </p>
-        </div>
-      </div>
+      <button class="menu-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z" />
+        </svg>
+        <svg class="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path
+            d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z" />
+        </svg>
+      </button>
+      <nav class="menu" data-dark>
+        <a href="#inicio">Home</a>
+        <a href="#acerca">About</a>
+        <a href="#acerca">About</a>
+        <a href="#acerca">About</a>
+        <a href="#acerca">About</a>
+      </nav>
     </section>
+  </header>
+  <!-- End Navigation bar -->
 
-    <!-- ***** footer ****** -->
-    <footer class="left">Copyright © 2027 by Budget Company S.A</footer>
+  <!-- Main -->
+  <main>
+    <!-- Hero section -->
+    <section class="hero-section">
+      <h1 class="h1">Build your financial future today</h1>
+      <p class="hero-text">Learn to save and prosper with Moneymate.</p>
+      <div class="hero-btn--center">
+        <a href="budget.html" class="btn hero-btn">Try for free</a>
+      </div>
+      <img src="images/budget.jpg" alt="Easy budget devices" class="hero-img">
+    </section>
+    <button class="dark-theme-btn">🌙</button>
 
-    <script
-      src="https://kit.fontawesome.com/ebacda2449.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/script.js"></script>
-  </body>
+    <!-- Hero section -->
+    <section class="other-section">
+
+    </section>
+    <!-- End Main -->
+  </main>
+  <!-- End Main -->
+
+  <script src="js/script.js"></script>
+</body>
+
 </html>

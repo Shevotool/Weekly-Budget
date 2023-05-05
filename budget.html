@@ -1,88 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Raleway:100,400"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/custom.css" />
-    <title>Monthly Budget</title>
-  </head>
-  <body>
-    <div class="container">
-      <!--    <header>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,400" rel="stylesheet" />
+  <link rel="stylesheet" href="css/custom.css" />
+  <link rel="stylesheet" href="css/modal-queries.css" />
+  <title>Monthly Budget</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="btn-b">
+      <a href="index.html" class="btn btn-back" id="back">Home</a>
+    </div>
+    <!--    <header>
         <h1 class="text-center">Monthly Budget</h1>
       </header> -->
-      <section class="contenido-principal">
-        <div class="row">
-          <div class="col">
-            <div class="contenido primario">
-              <h2 class="text-center">Add your expenses here</h2>
-              <form id="agregar-gasto" action="#">
-                <div class="form-group">
-                  <label for="gasto" class="gasto">Expense:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="gasto"
-                    placeholder="Expense name"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="cantidad" class="gasto">Amount:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="cantidad"
-                    placeholder="Amount in $"
-                  />
-                </div>
-
-                <button type="submit" class="btn btn-width btn-primary">
-                  Add
-                </button>
-              </form>
+    <section class="contenido-principal ">
+      <div class="row">
+        <div class="col">
+          <div class="contenido primario">
+            <div class="logo">
+              <img src="images/MONEYMATE.svg" alt="Money Mate">
             </div>
-            <!--.contenido-->
-          </div>
-          <!--.col-->
-
-          <div class="col">
-            <div class="contenido secundario">
-              <h2 class="text-center">List</h2>
-
-              <div id="gastos">
-                <ul class="list-group"></ul>
+            <h2 class="text-center">Add your expenses here</h2>
+            <form id="agregar-gasto" action="#">
+              <div class="form-group">
+                <label for="gasto" class="gasto">Expense:</label>
+                <input type="text" class="form-control" id="gasto" placeholder="Expense name" />
               </div>
-              <div id="presupuesto" class="presupuesto">
-                <div class="alert alert-primary">
-                  <p class="total">
-                    Budget: $ <span id="total" class="total"></span>
-                  </p>
-                </div>
-                <div class="restante alert alert-success">
-                  <p class="total">
-                    Remaining: $ <span id="restante" class="total"></span>
-                  </p>
-                </div>
+              <div class="form-group">
+                <label for="cantidad" class="gasto">Amount:</label>
+                <input type="text" class="form-control" id="cantidad" placeholder="Amount in $" />
               </div>
-              <!--.presupuesto-->
-            </div>
-            <!--.contenido-->
+
+              <button type="submit" class="btn btn-width btn-primary">
+                Add Expense
+              </button>
+            </form>
           </div>
-          <!--.col-->
+          <!--.contenido-->
         </div>
-        <!--.row-->
-      </section>
-    </div>
+        <!--.col-->
+        <div class="col margin-top">
+          <div class="new-budget">
+            <a href="#" class="btn budget-btn" id="budget">New Budget</a>
+          </div>
+          <div class="contenido secundario">
+            <h2 class="text-center">List</h2>
+            <div id="gastos">
+              <ul class="list-group"></ul>
+            </div>
+            <div id="presupuesto" class="presupuesto">
+              <div class="alert alert-primary">
+                <p class="total">
+                  Budget: $ <span id="total" class="total"></span>
+                </p>
+              </div>
+              <div class="restante alert alert-success">
+                <p class="total">
+                  Remaining: $ <span id="restante" class="total"></span>
+                </p>
+              </div>
+            </div>
+            <!--.presupuesto-->
+          </div>
+          <!--.contenido-->
+        </div>
+        <!--.col-->
+      </div>
+      <!--.row-->
+    </section>
+  </div>
 
-    <script src="js/app.js"></script>
-  </body>
+  <!-- Modal Budget -->
+
+  <div id="myModal" class="modal-popup">
+    <div class="modal-content--popup">
+      <span class="modal-close">&times;</span>
+      <p class="modal-p">What is your budget?</p>
+      <input type="number" id="budget-input" class="budget-i" placeholder="Enter your budget">
+      <div id="mensaje-container"></div> <!-- contenedor para el mensaje -->
+      <button id="submit-btn" class="btn button-submit">Add Budget</button>
+
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+
 </html>

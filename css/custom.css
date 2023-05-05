@@ -1,22 +1,59 @@
-* {
-  font-family: Arial, Helvetica, sans-serif;
+:root {
+  --dark-color: #222;
+  --white-color: #fefefe;
+  --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.24),
+    0px 24px 40px rgba(0, 0, 0, 0.24);
+  --box-shadow-2: 0 0.5rem 1rem rgba(0,
+      0,
+      0,
+      0.2);
 }
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+
 body {
-  background: #000428; /* fallback for old browsers */
+  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #13547a, #6991c7);
   background: linear-gradient(to right, #13547a, #6991c7);
+
 }
+
 header {
   margin: 30px 0;
+
 }
 
 .contenido {
-  padding: 20px;
+  /*  background-color: red; */
+  padding: 2rem;
+  margin: 0 auto;
 }
+
 .contenido-principal {
-  background-color: white;
-  padding: 30px;
-  border-radius: 20px;
+  margin-top: 12rem;
+  padding: 2rem 2rem 4rem 2rem;
+  background-color: var(--white-color);
+  border-radius: 2px;
+  box-shadow: var(--box-shadow);
+  /*   background-color: blue; */
+}
+
+.margin-top {
+  margin-top: 6rem;
 }
 
 .gasto {
@@ -28,17 +65,21 @@ header {
   margin-bottom: 0;
   font-weight: bold;
 }
+
 .presupuesto p span {
   font-weight: normal;
 }
+
 #gastos {
   margin-bottom: 30px;
 }
+
 h1 {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
   color: #ffffff;
 }
+
 h2 {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
@@ -48,15 +89,74 @@ h2 {
 }
 
 .btn-width {
-  font-size: 18px;
+  font-size: 1.2rem;
+  color: var(--white-color);
+}
+
+/* btn budget */
+
+.new-budget {
+  display: flex;
+  justify-content: center;
+
+}
+
+.budget-btn {
+  display: inline-block;
+  top: 0;
+  margin-top: 0rem;
+  background-color: rgb(50, 40, 40);
+  font-size: 1.2rem;
+  margin-bottom: 4rem;
+  color: var(--white-color) !important;
+}
+
+.btn,
+.btn:link {
+  border-radius: .5rem;
+  padding: 1.2rem 2.4rem;
+  display: inline-block;
+  max-width: 100%;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s ease;
+}
+
+.btn:hover,
+.btn:visited {
+  transform: scale(1.05);
+  box-shadow: var(--box-shadow-2);
+  color: var();
+}
+
+.btn-b {
+  position: fixed;
+  display: inline-block;
+  top: 2.5rem;
+  right: 3%;
+  width: 20%;
+
+}
+
+.btn-back {
+  background-color: var(--white-color);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--dark-color) !important;
+}
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Queries */
 
 @media screen and (max-width: 767px) {
-  .container {
-    margin-top: 4vh;
-  }
 
   .text-center {
     font-family: Arial, Helvetica, sans-serif;
@@ -68,27 +168,22 @@ h2 {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 150px;
   }
 }
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
-  .container {
-    margin-top: 20vh;
-  }
-
   .btn-width {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 150px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .container {
-    margin-top: 20vh;
+  .contenido {
+    width: 50rem !important;
   }
+
 
   .text-center {
     font-family: Arial, Helvetica, sans-serif;
@@ -100,7 +195,6 @@ h2 {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 150px;
   }
 }
 
@@ -114,4 +208,99 @@ h2 {
 
 .primary-btn {
   font-size: 200px;
+}
+
+/* Modal budget */
+
+.modal-popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  border-bottom: 1px solid #ccc;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background: #33333395;
+
+}
+
+.modal-content--popup {
+  background-color: #fefefe;
+  margin: 12% auto;
+  border: 1px solid #888;
+  height: 40%;
+  width: 40%;
+}
+
+.modal-p {
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.modal-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+
+.modal-close:hover,
+.modal-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+/* Estilo para el campo de entrada y el botón */
+input[type="number"] {
+  display: block;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: #fefefe;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+}
+
+/*  btn popup */
+.button-submit {
+  display: block;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  border-radius: .5rem;
+  border: none;
+  background-color: #007BFF;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type="number"]:focus {
+  border-color: var(--dark-color);
+}
+
+
+/* Estilo para el botón de enviar cuando está desactivado */
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Logo */
+
+.logo img {
+  display: block;
+  margin: -6rem auto;
+  width: 25rem;
 }
