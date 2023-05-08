@@ -1,7 +1,9 @@
 "use strict";
 
 const ls = localStorage;
-/* ******** Menu ******** */
+///////////////////////////////////////////////////////////
+// Menu
+
 ((d) => {
   const $btnMenu = d.querySelector(".menu-btn"),
     $menu = d.querySelector(".menu");
@@ -21,50 +23,32 @@ const ls = localStorage;
   });
 })(document);
 
-/* ******** Menu ******** */
+///////////////////////////////////////////////////////////
+// Smooth Scrolling Animation
 
-/* ******** Dark theme ******** */
-function darkTheme(btn, classDark) {
-  const $themeBtn = document.querySelector(btn),
-    $selectors = document.querySelectorAll("[data-dark]");
+const allLinks = document.querySelectorAll("link");
+allLinks.forEach(function (link) {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const href = link.getAttribute("href");
 
-  //console.log($selectors);
+    // Scroll back to top
+    if (href === "#") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
 
-  let moon = "🌙";
-  let sun = "🌞";
+    // Scroll to other links
+    if (href !== "#" && href.startsWith("#")) {
+      const sectionEl = document.querySelector(href);
+      sectionEl.scrollIntoView({ behavior: "smooth" });
+    }
 
-  const lightMode = () => {
-    $selectors.forEach((el) => el.classList.remove(classDark));
-    $themeBtn.textContent = moon;
-    ls.setItem("theme", "light");
-  };
-
-  const darkMode = () => {
-    $selectors.forEach((el) => el.classList.add(classDark));
-    $themeBtn.textContent = sun;
-    ls.setItem("theme", "dark");
-  };
-
-  document.addEventListener("click", (e) => {
-    if (e.target.matches(btn)) {
-      console.log($themeBtn.textContent);
-      if ($themeBtn.textContent === moon) {
-        darkMode();
-      } else {
-        lightMode();
-      }
+    // Close mobile navigation
+    if (link.classList.contains("main-nav-link")) {
+      headerEl.classList.toggle("nav-open");
     }
   });
-
-  document.addEventListener("DOMContentLoaded", (e) => {
-    //console.log(ls.getItem("theme"));
-    if (ls.getItem("theme") === null) ls.setItem("theme", "light");
-    if (ls.getItem("theme") === "light") {
-      lightMode();
-    }
-    if (ls.getItem("theme") === "dark") {
-      darkMode();
-    }
-  });
-}
-darkTheme(".dark-theme-btn", "dark-mode");
+});

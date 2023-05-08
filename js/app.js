@@ -6,7 +6,6 @@ const gastoListado = document.querySelector("#gastos ul");
 const budgetBtn = document.querySelector("#budget");
 
 // Eventos
-
 eventListeners();
 function eventListeners() {
   formulario.addEventListener("submit", agregarGasto);
