@@ -45,10 +45,31 @@ allLinks.forEach(function (link) {
       const sectionEl = document.querySelector(href);
       sectionEl.scrollIntoView({ behavior: "smooth" });
     }
-
-    // Close mobile navigation
-    if (link.classList.contains("main-nav-link")) {
-      headerEl.classList.toggle("nav-open");
-    }
   });
+});
+
+///////////////////////////////////////////////////////////
+// Reveal Sections
+
+const allSections = document.querySelectorAll(".section");
+
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+  //console.log(entry);
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove("section--hidden");
+};
+
+const THRESHOLD = 0.15;
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: THRESHOLD,
+});
+
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add("section--hidden");
+  //observer.unobserve(entry.target);
 });
