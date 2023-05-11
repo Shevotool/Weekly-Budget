@@ -128,7 +128,7 @@ h2 {
 .btn:visited {
   transform: scale(1.05);
   box-shadow: var(--box-shadow-2);
-  color: var();
+  /*   color: var();   */
 }
 
 .btn-b {

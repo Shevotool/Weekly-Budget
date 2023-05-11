@@ -26,7 +26,7 @@ const ls = localStorage;
 ///////////////////////////////////////////////////////////
 // Smooth Scrolling Animation
 
-const allLinks = document.querySelectorAll("link");
+const allLinks = document.querySelectorAll(".link");
 allLinks.forEach(function (link) {
   link.addEventListener("click", (e) => {
     e.preventDefault();

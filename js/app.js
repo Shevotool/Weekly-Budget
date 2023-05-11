@@ -168,7 +168,7 @@ function alertaPopup() {
   divMensaje.classList.add("text-center", "alert");
 
   // Mensaje de error
-  const mensajePopup = "Insert an amount";
+  const mensajePopup = "Invalid amount";
   divMensaje.textContent = mensajePopup;
   divMensaje.style.fontSize = "1.6rem";
   divMensaje.classList.add("alert-danger");
