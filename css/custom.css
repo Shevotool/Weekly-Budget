@@ -1,14 +1,49 @@
+/* ******** Custom Properties ******** */
 :root {
+  /* First and second color */
   --dark-color: #222;
-  --white-color: #fefefe;
+  --first-color: #444;
+  /* Header */
+  --white-color: #fff;
+  --gray-light-color: #f3f3f3;
+  --gray-color: #ccc;
+  --dark-gray-color: #666;
+  --black-color: #200D0D;
+  /* Fonts */
+  --first-alpha-color: #e6e7e8;
+  --second-color: #333333;
+  --link-color: #509ee3;
+  --title-color: #333;
+  --text-color: #222;
+  /* Cards */
+  --circle-color: #18A0FB;
+  --purple-card: #7B61FF;
+  --blue-card: #18A0FB;
+  --orange-card: #F24822;
+  --green-card: #1BC47D;
+  /* Shadows */
+  --black-alpha-color: rgba(0, 0, 0, 0.5);
   --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.24),
     0px 24px 40px rgba(0, 0, 0, 0.24);
   --box-shadow-2: 0 0.5rem 1rem rgba(0,
       0,
       0,
       0.2);
+  --box-shadow-3: 0 0.5rem 1rem rgba(#000, 0.2);
+  --font: "Raleway", sans-serif;
+  --max-width: 1200px;
+  --header-height: 6rem;
+  /* Buttons */
+  --hero-btn: #18A0FB;
+  --free-btn: #18a0fb62;
+  --premium-btn: #18A0FB;
+  --text-btn: #1979b8df;
+  --main-btn: #007BFF;
 }
 
+/* ************************* */
+/* RESET */
+/* ************************* */
 html {
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
@@ -27,8 +62,8 @@ html {
 
 body {
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #13547a, #6991c7);
-  background: linear-gradient(to right, #13547a, #6991c7);
+  background: -webkit-linear-gradient(to right, #006CE0, #007BFF);
+  background: linear-gradient(to right, #006CE0, #007BFF);
 
 }
 
@@ -37,10 +72,18 @@ header {
 
 }
 
+/* ************************* */
+/* COMPONENTS */
+/* ************************* */
 .contenido {
-  /*  background-color: red; */
   padding: 2rem;
   margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contenido-principal {
@@ -49,7 +92,6 @@ header {
   background-color: var(--white-color);
   border-radius: 2px;
   box-shadow: var(--box-shadow);
-  /*   background-color: blue; */
 }
 
 .margin-top {
@@ -88,28 +130,18 @@ h2 {
   margin-bottom: 30px;
 }
 
-.btn-width {
-  font-size: 1.2rem;
-  color: var(--white-color);
+.badge-pill {
+  padding: 1rem;
 }
 
-/* btn budget */
-
-.new-budget {
-  display: flex;
-  justify-content: center;
-
+.list-group-item {
+  font-size: 2rem;
+  font-weight: 500;
 }
 
-.budget-btn {
-  display: inline-block;
-  top: 0;
-  margin-top: 0rem;
-  background-color: rgb(50, 40, 40);
-  font-size: 1.2rem;
-  margin-bottom: 4rem;
-  color: var(--white-color) !important;
-}
+/* ************************* */
+/* Botones */
+/* ************************* */
 
 .btn,
 .btn:link {
@@ -131,6 +163,27 @@ h2 {
   /*   color: var();   */
 }
 
+.new-budget {
+  display: flex;
+  justify-content: center;
+
+}
+
+.budget-btn {
+  display: inline-block;
+  top: 0;
+  margin-top: 0rem;
+  background-color: rgb(50, 40, 40);
+  font-size: 1.2rem;
+  margin-bottom: 4rem;
+  color: var(--white-color) !important;
+}
+
+.budget-i {
+  height: 4rem;
+  width: 30rem;
+}
+
 .btn-b {
   position: fixed;
   display: inline-block;
@@ -138,6 +191,12 @@ h2 {
   right: 3%;
   width: 20%;
 
+}
+
+.btn-width {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  color: var(--white-color);
 }
 
 .btn-back {
@@ -148,13 +207,27 @@ h2 {
 }
 
 
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* ************************* */
+/* Iconos */
+/* ************************* */
+.icon-list,
+.expense-icon {
+  position: relative;
 }
 
+.icon-list {
+  margin-left: .5rem;
+  top: .2rem;
+}
+
+.expense-icon {
+  margin-left: .5rem;
+  top: .5rem;
+}
+
+/* ************************* */
 /* Queries */
+/* ************************* */
 
 @media screen and (max-width: 767px) {
 
@@ -210,7 +283,9 @@ h2 {
   font-size: 200px;
 }
 
-/* Modal budget */
+/* ************************* */
+/* Popup New Budget */
+/* ************************* */
 
 .modal-popup {
   display: none;
@@ -222,66 +297,111 @@ h2 {
   height: 100%;
   width: 100%;
   overflow: auto;
-  background: #33333395;
-
+  background: #333333a8;
+  transition: all 0.3s;
 }
 
 .modal-content--popup {
+  position: absolute;
   background-color: #fefefe;
   margin: 12% auto;
   border: 1px solid #888;
   height: 40%;
   width: 40%;
+  top: 20vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #faf4ee;
+  box-shadow: 0 2re 4rem rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  transform: translate(-50%, -50%) scale(1);
 }
 
-.modal-p {
-  margin-top: 2.5rem;
-  font-size: 1.5rem;
+.modal-content--popup {
+  position: absolute;
+  margin: 12% auto;
+  border: 1px solid #888;
+  height: 48%;
+  width: 40%;
+  top: 20vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white-color);
+  box-shadow: 0 0.5rem 1rem rgba(#000, 0.2);
+  border-radius: 3px;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal--budget-text {
+  margin-top: 5rem;
+  margin-bottom: 3.5rem;
+  font-size: 2.6rem;
   text-align: center;
+  font-weight: 600;
 }
 
 .modal-close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+  background-color: var(--main-btn);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50%;
+  color: #e6e7e8;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2.5rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s;
+  line-height: 1;
+  padding-bottom: 1.2rem;
+  transition: all .3s;
 }
 
 
 .modal-close:hover,
 .modal-close:focus {
-  color: black;
+  color: var(--white-color);
   text-decoration: none;
   cursor: pointer;
+  transform: scale(1.05);
 }
 
 h2 {
   margin-top: 0;
 }
 
+/* ************************* */
 /* Estilo para el campo de entrada y el botón */
+/* ************************* */
 input[type="number"] {
   display: block;
   margin: 2rem auto;
   padding: 1rem 2rem;
-  font-size: 1rem;
+  font-size: 1.6rem;
   border-radius: 5px;
   background-color: #fefefe;
-  color: #333;
+  color: var(--title-color);
   cursor: pointer;
   outline: none;
 }
 
-/*  btn popup */
+.budget-input {
+  width: 30rem;
+}
+
+/* ************************* */
+/* btn popup */
+/* ************************* */
 .button-submit {
   display: block;
   margin: 0 auto;
+  width: 15rem;
   padding: 1rem 2rem;
   font-size: 1.6rem;
   border-radius: .5rem;
   border: none;
-  background-color: #007BFF;
-  color: #fff;
+  background-color: var(--main-btn);
+  color: var(--white-color);
   cursor: pointer;
   outline: none;
 }
@@ -290,17 +410,21 @@ input[type="number"]:focus {
   border-color: var(--dark-color);
 }
 
-
+/* ************************* */
 /* Estilo para el botón de enviar cuando está desactivado */
+/* ************************* */
 button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
 }
 
+/* ************************* */
 /* Logo */
+/* ************************* */
 
 .logo img {
   display: block;
   margin: -6rem auto;
-  width: 25rem;
+  margin-top: -9rem;
+  height: 30rem;
 }

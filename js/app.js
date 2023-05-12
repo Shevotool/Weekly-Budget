@@ -210,7 +210,7 @@ function openModal() {
       alertaPopup();
     } else {
       presupuesto = new Presupuesto(presupuestoUsuario);
-      console.log(presupuesto);
+      // console.log(presupuesto);
 
       ui.insertarPresupuesto(presupuesto);
       modal.style.display = "none";
@@ -247,6 +247,12 @@ function agregarGasto(e) {
 
   if (!presupuesto) {
     ui.imprimirAlerta("Please create a budget first.", "error");
+    return formulario.reset();
+  }
+
+  // Verificar si el gasto excede el presupuesto restante
+  if (cantidad > presupuesto.restante) {
+    ui.imprimirAlerta("Invalid amount.", "error");
     return formulario.reset();
   }
 

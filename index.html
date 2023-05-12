@@ -6,12 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/queries.css" />
-  <title>MoneyMate</title>
+  <title>Money Mate</title>
 </head>
 
 <body>
@@ -35,7 +32,7 @@
         <a href="#how" class="link">Steps</a>
         <a href="#goals" class="link">Goals</a>
         <a href="#pricing" class="link">Pricing</a>
-        <a href="#acerca" class="link">About</a>
+        <a href="#contact" class="link">Contact</a>
       </nav>
     </section>
   </header>
@@ -46,11 +43,19 @@
     <!-- Hero section -->
     <section class="hero-section" id="hero">
       <h1 class="h1">Build your financial future today</h1>
-      <p class="hero-text">Learn to save and prosper with Moneymate.</p>
+      <p class="hero-text">Learn to save and prosper with Money Mate.</p>
       <div class="hero-btn--center">
         <a href="budget.html" class="btn hero-btn">Try for free</a>
       </div>
-      <img src="images/budget.jpg" alt="Easy budget devices" class="hero-img">
+
+      <div class="video">
+        <video class="bg--video-content" autoplay muted loop>
+          <source src="assets/video.mp4" type="video/mp4">
+          <source src="img/video.webm" type="video/webm">
+          Your browser is not supported!
+        </video>
+      </div>
+      <!-- <img src="images/budget.jpg" alt="Easy budget devices" class="hero-img"> -->
     </section>
 
     <!-- How section -->
@@ -234,12 +239,13 @@
             <p class="card--amount">$&nbsp<span class="card--zero">19</span>&nbsp/mo</p>
             <p class="card--text"> You can cancel at any time</p>
             <ul class="card--list">
-              <li><span class="card--icon"><ion-icon name="checkmark-outline"></ion-icon></span> &nbsp&nbsp&nbspNO
+              <li><span class="card--icon"><ion-icon name="checkmark-outline"></ion-icon></span> &nbsp&nbsp&nbspBudget
                 Graphics</li>
-              <li><span class="card--icon"><ion-icon name="checkmark-outline"></ion-icon></span> &nbsp&nbsp&nbspNO Data
+              <li><span class="card--icon"><ion-icon name="checkmark-outline"></ion-icon></span> &nbsp&nbsp&nbspSave
+                Data
               </li>
-              <li><span class="card--icon"><ion-icon name="checkmark-outline"></ion-icon></span> &nbsp&nbsp&nbspFree
-                Access</li>
+              <li><span class="card--icon"><ion-icon name="checkmark-outline"></ion-icon></span> &nbsp&nbsp&nbspSupport
+                24/7</li>
             </ul>
             <div class="card--btn">
               <a href="#" class="btn premium-btn">Get Started</a>
@@ -250,21 +256,71 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer" id="footer">
-      <div class="footer-container">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis repellendus distinctio eaque, deserunt
-          dolores maxime? Saepe fugiat minima maiores animi reiciendis soluta corporis, unde adipisci assumenda non
-          nihil delectus accusantium.</p>
+    <footer class="footer" id="contact">
+      <div class="container grid grid--footer">
+        <div class="logo-col">
 
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, expedita error, eaque quisquam molestiae
-          assumenda, dolorum commodi ex sunt ab soluta tempora maxime temporibus doloribus corporis ut quasi fugiat
-          voluptatibus?</p>
+          <div class="footer-input"><a class="footer-link" for="mail" href="mailto:shevo25gonzalez@gmail.com"><label
+                for="mail">Send Us an
+                email <ion-icon name="mail-unread-outline" class="footer-mail"></ion-icon></label>
+              <input type="text" class="input"></a></div>
+          <ul class="social-links">
+            <li><a class="footer-link" href="#"><ion-icon class="social-icon" name="logo-instagram"></ion-icon></a></li>
+            <li><a class="footer-link" href="#"><ion-icon class="social-icon" name="logo-facebook"></ion-icon></a></li>
+            <li><a class="footer-link" href="#"><ion-icon class="social-icon" name="logo-twitter"></ion-icon></a></li>
+          </ul>
+
+          <p class="copyright">Copyright &copy; <span class="year">2027</span> by Money Mate,Inc. All rights reserved.
+          </p>
+
+        </div>
+        <div class="address-col">
+          <p class="footer-heading">Contact Us</p>
+          <address class="contacts">
+            <p class="address">
+              713 Jane St., 1nd Floor, Orlando Florida, US 99136
+            </p>
+            <p>
+              <a class="footer-link" href="tel:415-201-6370">415-201-6370</a>
+              <br>
+              <a class="footer-link" href="mailto:hello@moneymate.com">hello@moneymate.com</a>
+            </p>
+          </address>
+        </div>
+        <nav class="nav-col">
+          <p class="footer-heading">Account</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Create account</a></li>
+            <li><a class="footer-link" href="#">Sign in</a></li>
+            <li><a class="footer-link" href="#">iOS app</a></li>
+            <li><a class="footer-link" href="#">Android app</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <p class="footer-heading">Company</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">About Money Mate</a></li>
+            <li><a class="footer-link" href="#">For Bussiness</a></li>
+            <li><a class="footer-link" href="#">Prices</a></li>
+            <li><a class="footer-link" href="#">Careers</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">My Website</a></li>
+            <li><a class="footer-link" href="#">Help center</a></li>
+            <li><a class="footer-link" href="#">Privacy & terms</a></li>
+          </ul>
+        </nav>
       </div>
     </footer>
 
   </main>
   <!-- End Main -->
 
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="js/script.js"></script>
 </body>
 
