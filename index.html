@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/queries.css" />
+  <link rel="stylesheet" href="css/main_queries.css" />
   <title>Money Mate</title>
 </head>
 
@@ -18,7 +18,7 @@
       <div class="logo">
         <a href="index.html"><img src="images/MONEYMATE.svg" alt="Money Mate Tech solutions" class="moneymate"></a>
       </div>
-      <button class="menu-btn">
+      <button class="menu-btn" aria-label="name">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
           <path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z" />
         </svg>
@@ -52,10 +52,11 @@
         <video class="bg--video-content" autoplay muted loop>
           <source src="assets/video.mp4" type="video/mp4">
           <source src="img/video.webm" type="video/webm">
+          <track src="assets/Zero Gravity.wav" kind="captions" srclang="en" label="english_captions">
+          <track src="assets/Zero Gravity.wav" kind="captions" srclang="es" label="spanish_captions">
           Your browser is not supported!
         </video>
       </div>
-      <!-- <img src="images/budget.jpg" alt="Easy budget devices" class="hero-img"> -->
     </section>
 
     <!-- How section -->
@@ -74,20 +75,18 @@
           <p class="step-description">Setting a personalized budget is a crucial first step in managing your finances
             effectively. By creating a budget that
             reflects your unique financial situation and goals, you'll gain clarity and control over your money.</p>
-
         </div>
         <div class="step-img-box">
-          <img src="images/budget-smart.jpg" class="step-img" alt="Iphone app preferences selection screen">
+          <img src="assets/moneymate-mobile.webp" class="step-img" alt="Iphone app preferences selection screen">
         </div>
 
         <!-- STEP 02 -->
         <div class="step-img-box">
-          <img src="images/budget-smart.jpg" class="step-img" alt="Iphone app meal approving plan screen">
+          <img src="assets/moneymate-mobile.webp" class="step-img" alt="Iphone app meal approving plan screen">
         </div>
-
         <div class="step-text-box">
-          <p class="step-number">02</p>
-          <h3 class="heading-tertiary">Add your expenses to monitor them</h3>
+          <p class="step-number two">02</p>
+          <h3 class="heading-tertiary two">Add your expenses to monitor them</h3>
           <p class="step-description">Adding your expenses to a financial management app is an essential step in taking
             control of your finances. By logging
             your expenses as they occur, you'll be able to see exactly where your money is going and identify areas
@@ -107,7 +106,7 @@
             health.</p>
         </div>
         <div class="step-img-box">
-          <img src="images/budget-smart.jpg" class="step-img" alt="Iphone app delivery screen">
+          <img src="assets/moneymate-mobile.webp" class="step-img" alt="Iphone app delivery screen">
         </div>
       </div>
     </section>
@@ -127,14 +126,14 @@
               <div class="card--flex">
                 <div class="card--circle card--circle-orange"></div>
                 <div class="card--category">
-                  <h3>Retirement Savings</h3>
+                  <h3>Save for your dreams</h3>
                 </div>
               </div>
-              <p class="card--p">It's never too early to start saving for retirement. By putting money into a retirement
-                account, such as a 401(k) or
-                IRA, you can build a nest egg for your future. The earlier you start, the more time your money has to
-                grow. Saving for
-                retirement can give you financial security in your golden years.
+              <p class="card--p">By setting money aside for things you really want, you can achieve your goals and make
+                your dreams a reality. Whether
+                it's a dream vacation, a down payment on a house, or starting your own business, saving for your dreams
+                can help you
+                reach them faster.
               </p>
             </div>
             <div class="card-icons">
@@ -166,16 +165,16 @@
           <div class="card green-card">
             <div class="card--content">
               <div class="card--flex">
-                <div class="card--circle"></div>
+                <div class="card--circle card--circle-blue"></div>
                 <div class="card--category">
-                  <h3>Save for your dreams</h3>
+                  <h3>Retirement Savings</h3>
                 </div>
               </div>
-              <p class="card--p">By setting money aside for things you really want, you can achieve your goals and make
-                your dreams a reality. Whether
-                it's a dream vacation, a down payment on a house, or starting your own business, saving for your dreams
-                can help you
-                reach them faster.
+              <p class="card--p">It's never too early to start saving for retirement. By putting money into a retirement
+                account, such as a 401(k) or
+                IRA, you can build a nest egg for your future. The earlier you start, the more time your money has to
+                grow. Saving for
+                retirement can give you financial security in your golden years.
               </p>
             </div>
             <div class="card-icons">
@@ -210,9 +209,9 @@
     <!-- Section Pricing -->
     <section class="section-pricing" id="pricing">
       <div class="section">
-        <div class="container-2">
-          <!--       <span class="subheading margin-left">Pricing</span> -->
-          <h2 class="heading-secondary margin-left">Pricing</h2>
+        <div class="container-2 ">
+          <span class="subheading margin-left price-text">pricing</span>
+          <h2 class="heading-tertiary margin-left price-paragraph">Manage your budget effectively</h2>
         </div>
         <div class="pricing">
           <!-- Pricing card 1 -->
@@ -262,19 +261,21 @@
 
           <div class="footer-input"><a class="footer-link" for="mail" href="mailto:shevo25gonzalez@gmail.com"><label
                 for="mail">Send Us an
-                email <ion-icon name="mail-unread-outline" class="footer-mail"></ion-icon></label>
-              <input type="text" class="input"></a></div>
+                email <ion-icon name="mail-unread-outline" class="footer-mail"></ion-icon>
+                <input type="text" class="input"></a></div>
+          </label>
           <ul class="social-links">
-            <li><a class="footer-link" href="#"><ion-icon class="social-icon" name="logo-instagram"></ion-icon></a></li>
-            <li><a class="footer-link" href="#"><ion-icon class="social-icon" name="logo-facebook"></ion-icon></a></li>
-            <li><a class="footer-link" href="#"><ion-icon class="social-icon" name="logo-twitter"></ion-icon></a></li>
+            <li><a class="footer-link" href="#" aria-label="Libk to my social media"><ion-icon class="social-icon"
+                  name="logo-instagram"></ion-icon></a></li>
+            <li><a class="footer-link" href="#" aria-label="Libk to my social media"><ion-icon class="social-icon"
+                  name="logo-facebook"></ion-icon></a></li>
+            <li><a class="footer-link" href="#" aria-label="Libk to my social media"><ion-icon class="social-icon"
+                  name="logo-twitter"></ion-icon></a></li>
           </ul>
-
           <p class="copyright">Copyright &copy; <span class="year">2027</span> by Money Mate,Inc. All rights reserved.
           </p>
-
         </div>
-        <div class="address-col">
+        <div class="address-col adress">
           <p class="footer-heading">Contact Us</p>
           <address class="contacts">
             <p class="address">
@@ -296,16 +297,16 @@
             <li><a class="footer-link" href="#">Android app</a></li>
           </ul>
         </nav>
-        <nav class="nav-col">
+        <nav class="nav-col company">
           <p class="footer-heading">Company</p>
-          <ul class="footer-nav">
+          <ul class="footer-nav ">
             <li><a class="footer-link" href="#">About Money Mate</a></li>
             <li><a class="footer-link" href="#">For Bussiness</a></li>
             <li><a class="footer-link" href="#">Prices</a></li>
             <li><a class="footer-link" href="#">Careers</a></li>
           </ul>
         </nav>
-        <nav class="nav-col">
+        <nav class="nav-col resources">
           <p class="footer-heading">Resources</p>
           <ul class="footer-nav">
             <li><a class="footer-link" href="#">My Website</a></li>
@@ -315,7 +316,6 @@
         </nav>
       </div>
     </footer>
-
   </main>
   <!-- End Main -->
 

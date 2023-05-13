@@ -1,6 +1,264 @@
+/* ************************* */
+/* Syte Queries */
+/* ************************* */
+
+/* rem and em do Not depend on html font-size in media queries! 
+Instead, 1rem = 1rem = 16px */
+
+/* ************************* */
+/* BELOW 1517px *  ( Desktops)/ 
+/* ************************* */
+
+@media(min-width: 84em) {
+  .logo {
+    position: absolute;
+    top: 6rem;
+    left: 35rem;
+  }
+
+  .btn-b {
+    right: 12rem;
+  }
+
+}
+
+/* ************************* */
+/* BELOW 1334px *  (Smaller Desktops)/ 
+/* ************************* */
+
+@media(max-width: 84em) {
+  html {
+    /* 9px / 16px */
+    font-size: 56.25%;
+  }
+
+  .modal-content--popup {
+    height: 40%;
+    width: 40%;
+    top: 25vh;
+    left: 50%;
+  }
+
+}
+
+/* ************************* */
+/* BELOW 1200px *  (Landscape Tablets)/ 
+/* ************************* */
+
+@media(max-width: 75em) {
+  html {
+    /* 9px / 16px */
+    font-size: 56.25%;
+  }
+
+  .modal-content--popup {
+    height: 40%;
+    width: 40%;
+    top: 25vh;
+    left: 50%;
+  }
+
+  .modal--budget-text {
+    margin-top: 8rem;
+    margin-bottom: 3.5rem;
+    font-size: 2.6rem;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+/* ************************* */
+/* BELOW 944px *  (Tablets)/ 
+/* ************************* */
+@media (max-width:59em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 51%;
+  }
+
+  .modal-content--popup {
+    height: auto;
+    padding-bottom: 6rem;
+    width: 40%;
+    top: 15vh;
+    left: 50%;
+  }
+
+  .modal--budget-text {
+    margin-top: 8rem;
+    margin-bottom: 3.5rem;
+    font-size: 2.6rem;
+  }
+
+  .budget-input {
+    width: 20rem;
+  }
+}
+
+/* ************************* */
+/* BELOW 704px *  (Smaller Tablets)/ 
+/* ************************* */
+
+@media (max-width: 44em) {
+
+  .modal-content--popup {
+    height: auto;
+    padding-bottom: 6rem;
+    width: 60%;
+    top: 25vh;
+    left: 50%;
+  }
+
+  .modal--budget-text {
+    margin-top: 8rem;
+    margin-bottom: 3.5rem;
+    font-size: 2.6rem;
+  }
+
+  .budget-input {
+    width: 20rem;
+  }
+}
+
+/* ************************* */
+/* BELOW 544px *  (Phones)/ 
+/* ************************* */
+
+@media (max-width: 34em) {
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.6rem;
+  }
+
+  .modal-content--popup {
+    height: auto;
+    padding-bottom: 6rem;
+    width: 80%;
+    top: 30vh;
+    left: 50%;
+  }
+
+  .modal--budget-text {
+    margin-top: 8rem;
+    margin-bottom: 3.5rem;
+    font-size: 2.6rem;
+  }
+
+  .budget-input {
+    width: 25rem;
+  }
+
+  .logo {
+    position: absolute;
+    top: 7rem;
+    left: 1rem;
+    padding-bottom: 0;
+
+  }
+
+  .logo img {
+    /*   display: block; */
+    margin: 0 auto;
+    margin-top: -16rem;
+    height: 30rem;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/*     -FONT SIZE SYSTEM (px) 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+
+
+/*     - Spacing system (px) 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
+
+
+/* ************************* */
+/* Fixing Safari flexbox gap */
+/* ************************* */
+
+.no-flexbox-gap .main-nav-list li:not(:last-child) {
+  margin-right: 4.8rem;
+}
+
+.no-flexbox-gap .list-item:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+.no-flexbox-gap .list-icon:not(:last-child) {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .delivered-faces {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .meal-attribute:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.no-flexbox-gap .meal-icon {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .footer-row div:not(:last-child) {
+  margin-right: 6.4rem;
+}
+
+.no-flexbox-gap .social-links li:not(:last-child) {
+  margin-right: 2.4rem;
+}
+
+.no-flexbox-gap .footer-nav li:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+
+@media (max-width: 75em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 3.2rem;
+  }
+}
+
+@media (max-width: 59em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 4.8rem;
+  }
+}
+
+
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .btn-width {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 @media screen and (min-width: 1024px) {
+  .contenido {
+    width: 50rem !important;
+  }
 
-  /* Modal */
+  .text-center {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+  }
 
-
+  .btn-width {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

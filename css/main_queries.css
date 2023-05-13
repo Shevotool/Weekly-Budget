@@ -1,0 +1,337 @@
+/* ************************* */
+/* Menu */
+/* ************************* */
+@media screen and (min-width:1024px) {
+  .header {
+    position: sticky;
+    top: 0;
+    padding: 0.5rem;
+    height: calc(var(--header-height) - 0.5rem);
+  }
+}
+
+
+@media screen and (min-width:1024px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .menu {
+    position: static;
+    width: auto;
+    flex-direction: row;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .menu a {
+    padding: 0 1rem;
+  }
+
+  .menu a:last-child {
+    padding-right: 0;
+  }
+
+  .menu a:hover {
+    background-color: transparent;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    background: linear-gradient(180deg, #f4f6f9 0%, #eef0f3 100%);
+  }
+
+  .menu a {
+    color: var(--first-color);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    margin-bottom: 0;
+    background: var(--second-color);
+  }
+
+  .menu-btn {
+    background-color: var(--second-color) !important;
+    padding: .2rem;
+  }
+
+  .menu-btn svg {
+    fill: #ffff;
+    border: thin #ffff;
+  }
+
+  .menu {
+    background-color: var(--second-color);
+  }
+
+
+  .menu a {
+    color: var(--white-color);
+  }
+
+  .moneymate {
+    display: none;
+  }
+}
+
+/* ************************* */
+/* Syte Queries */
+/* ************************* */
+
+/* rem and em do Not depend on html font-size in media queries! 
+Instead, 1rem = 1rem = 16px */
+
+/* ************************* */
+/* BELOW 1517px *  ( Desktops)/ 
+/* ************************* */
+
+@media(min-width: 84em) {
+  .hero-section {
+    height: 150vh;
+  }
+
+}
+
+/* ************************* */
+/* BELOW 1334px *  (Smaller Desktops)/ 
+/* ************************* */
+
+@media(max-width: 84em) {
+  html {
+    /* 9px / 16px */
+    font-size: 56.25%;
+  }
+
+  .hero-section {
+    height: 120vh;
+  }
+
+  .section-how {
+    padding-left: 6rem;
+  }
+
+
+}
+
+/* ************************* */
+/* BELOW 1200px *  (Landscape Tablets)/ 
+/* ************************* */
+
+@media(max-width: 75em) {
+  html {
+    /* 9px / 16px */
+    font-size: 56.25%;
+  }
+
+  .hero-section {
+    height: 100vh;
+  }
+
+  .section-how {
+    padding-left: 2rem;
+  }
+
+}
+
+/* ************************* */
+/* BELOW 944px *  (Tablets)/ 
+/* ************************* */
+@media (max-width:59em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 51%;
+  }
+
+  .hero-section {
+    height: 100%;
+    padding: 6rem;
+    padding-bottom: 18rem;
+  }
+
+  .video {
+    display: none;
+  }
+
+  .section-how {
+    padding-left: 2rem;
+  }
+
+  .margin-left {
+    text-align: center;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing {
+    flex-direction: column;
+  }
+
+  .grid--footer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .resources {
+    display: none;
+  }
+
+  .input {
+    width: 15rem;
+  }
+}
+
+/* ************************* */
+/* BELOW 704px *  (Smaller Tablets)/ 
+/* ************************* */
+
+@media (max-width: 44em) {
+
+
+  .grid--2-cols {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .step-img-box:nth-child(2) {
+    grid-row: 1;
+  }
+
+  .step-img-box:nth-child(6) {
+    grid-row: 5;
+  }
+
+  .step-img-box {
+    transform: translateY(2.4rem);
+  }
+
+  .two {
+    text-align: center;
+  }
+
+  .grid--footer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .resources {
+    display: none;
+  }
+
+  .company {
+    display: none;
+  }
+
+  .grid--footer {
+    text-align: center;
+  }
+}
+
+/* ************************* */
+/* BELOW 544px *  (Phones)/ 
+/* ************************* */
+
+@media (max-width: 34em) {
+
+  .grid--footer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .adress {
+    display: none;
+  }
+
+  .social-links {
+    margin: 0 auto;
+  }
+
+  .heading-secondary {
+    font-size: 2.6rem;
+  }
+
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.6rem;
+  }
+
+
+  .step-img-box::before {
+    width: 60%;
+    /* 60% of parent's width */
+    padding-bottom: 60%;
+    z-index: -2;
+  }
+
+  .step-img-box::after {
+    width: 45%;
+    padding-bottom: 45%;
+  }
+
+  .step-img {
+    width: 15rem;
+    height: 30rem;
+    border-radius: 8px;
+  }
+}
+
+/*     -FONT SIZE SYSTEM (px) 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+
+
+/*     - Spacing system (px) 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
+
+
+/* ************************* */
+/* Fixing Safari flexbox gap */
+/* ************************* */
+
+.no-flexbox-gap .main-nav-list li:not(:last-child) {
+  margin-right: 4.8rem;
+}
+
+.no-flexbox-gap .list-item:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+.no-flexbox-gap .list-icon:not(:last-child) {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .delivered-faces {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .meal-attribute:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.no-flexbox-gap .meal-icon {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .footer-row div:not(:last-child) {
+  margin-right: 6.4rem;
+}
+
+.no-flexbox-gap .social-links li:not(:last-child) {
+  margin-right: 2.4rem;
+}
+
+.no-flexbox-gap .footer-nav li:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+
+@media (max-width: 75em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 3.2rem;
+  }
+}
+
+@media (max-width: 59em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 4.8rem;
+  }
+}
