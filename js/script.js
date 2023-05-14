@@ -1,4 +1,9 @@
 "use strict";
+///////////////////////////////////////////////////////////
+// Set Current Year
+const year = document.querySelector(".year");
+const currentYear = new Date().getFullYear();
+year.textContent = currentYear;
 
 const ls = localStorage;
 ///////////////////////////////////////////////////////////

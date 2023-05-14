@@ -69,6 +69,10 @@ Instead, 1rem = 1rem = 16px */
     grid-template-columns: 1fr 1fr;
   }
 
+
+  .clear-btn {
+    right: -15rem;
+  }
 }
 
 /* ************************* */
@@ -97,6 +101,11 @@ Instead, 1rem = 1rem = 16px */
   .budget-input {
     width: 20rem;
   }
+
+  .clear-btn {
+    right: -10rem;
+  }
+
 }
 
 /* ************************* */
@@ -121,6 +130,10 @@ Instead, 1rem = 1rem = 16px */
 
   .budget-input {
     width: 20rem;
+  }
+
+  .clear-btn {
+    right: 0rem;
   }
 }
 
@@ -193,7 +206,9 @@ Instead, 1rem = 1rem = 16px */
     margin-left: 1rem;
   }
 
-
+  .clear-btn {
+    right: 0rem;
+  }
 
 }
 

@@ -6,6 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/main_queries.css" />
   <title>Money Mate</title>
@@ -32,7 +37,8 @@
   <header class="header">
     <section class="container">
       <div class="logo">
-        <a href="index.html"><img src="images/MONEYMATE.svg" alt="Money Mate Tech solutions" class="moneymate"></a>
+        <a href="index.html" aria-label="Money Mate Tech solutions"><img src="images/MONEYMATE.svg"
+            alt="Money Mate Tech solutions" class="moneymate"></a>
       </div>
       <button class="menu-btn" aria-label="name">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -57,7 +63,7 @@
   <!-- Main -->
   <main>
     <!-- Hero section -->
-    <section class="hero-section" id="hero">
+    <section class="hero-section fade-in" id="hero">
       <h1 class="h1">Build your financial future today</h1>
       <p class="hero-text">Learn to save and prosper with Money Mate.</p>
       <div class="hero-btn--center">
@@ -85,25 +91,28 @@
       <!-- How it works section -->
       <div class="container grid grid--2-cols grid--center-v">
         <!-- STEP 01 -->
-        <div class="step-text-box margin-left">
+        <div class="step-text-box margin-left margin-bottom">
           <p class="step-number">01</p>
           <h3 class="heading-tertiary">Set a personalized budget.</h3>
           <p class="step-description">Setting a personalized budget is a crucial first step in managing your finances
             effectively. By creating a budget that
-            reflects your unique financial situation and goals, you'll gain clarity and control over your money.</p>
+            reflects your unique financial situation and goals, you'll gain clarity and control over your money. </p>
         </div>
         <div class="step-img-box">
-          <img src="assets/moneymate-mobile.webp" class="step-img" alt="Iphone app preferences selection screen">
+          <img src="assets/moneymate-mobile.webp" width="250" height="250" class="step-img"
+            alt="Iphone app preferences selection screen">
         </div>
 
         <!-- STEP 02 -->
         <div class="step-img-box">
-          <img src="assets/moneymate-mobile.webp" class="step-img" alt="Iphone app meal approving plan screen">
+          <img src="assets/moneymate-mobile.webp" width="250" height="250" class="step-img"
+            alt="Iphone app meal approving plan screen">
         </div>
-        <div class="step-text-box">
+        <div class="step-text-box margin-bottom">
           <p class="step-number two">02</p>
           <h3 class="heading-tertiary two">Add your expenses to monitor them</h3>
-          <p class="step-description">Adding your expenses to a financial management app is an essential step in taking
+          <p class="step-description ">Adding your expenses to a financial management app is an essential
+            step in taking
             control of your finances. By logging
             your expenses as they occur, you'll be able to see exactly where your money is going and identify areas
             where you may be
@@ -115,14 +124,16 @@
         <div class="step-text-box margin-left">
           <p class="step-number">03</p>
           <h3 class="heading-tertiary">Use app data for financial decisions</h3>
-          <p class="step-description">When it comes to making informed financial decisions, the data you collect and
+          <p class="step-description">When it comes to making informed financial decisions, the data you
+            collect and
             analyze is critical. By using the data
             from a financial management app, you can gain valuable insights into your spending habits, income, and
             overall financial
             health.</p>
         </div>
         <div class="step-img-box">
-          <img src="assets/moneymate-mobile.webp" class="step-img" alt="Iphone app delivery screen">
+          <img src="assets/moneymate-mobile.webp" width="250" height="250" class="step-img"
+            alt="Iphone app delivery screen">
         </div>
       </div>
     </section>
@@ -132,7 +143,7 @@
       <div class="section">
         <div class="container-2 ">
           <span class="subheading margin-left">Achieve your financial goals</span>
-          <h2 class="heading-tertiary margin-left">Manage your budget effectively</h2>
+          <h2 class="heading-secondary-cards margin-left">Manage your budget effectively</h2>
         </div>
         <div class="cards container-2">
 
@@ -227,7 +238,7 @@
       <div class="section">
         <div class="container-2 ">
           <span class="subheading margin-left price-text">Select Your Plan</span>
-          <h2 class="heading-tertiary margin-left price-paragraph">Manage your budget effectively</h2>
+          <h2 class="heading-secondary-pricing margin-left price-paragraph">Start saving your money</h2>
         </div>
         <div class="pricing">
           <!-- Pricing card 1 -->
@@ -238,7 +249,8 @@
             <ul class="card--list">
               <li><span class="card--icon"><ion-icon name="checkmark-outline"></ion-icon></span> &nbsp&nbsp&nbspNO
                 Graphics</li>
-              <li><span class="card--icon"><ion-icon name="checkmark-outline"></ion-icon></span> &nbsp&nbsp&nbspNO Data
+              <li><span class="card--icon"><ion-icon name="checkmark-outline"></ion-icon></span> &nbsp&nbsp&nbspSave
+                Data
               </li>
               <li><span class="card--icon"><ion-icon name="checkmark-outline"></ion-icon></span> &nbsp&nbsp&nbspFree
                 Access</li>
@@ -274,7 +286,6 @@
     <footer class="footer" id="contact">
       <div class="container grid grid--footer">
         <div class="logo-col">
-
           <div class="footer-input"><a class="footer-link" for="mail" href="mailto:shevo25gonzalez@gmail.com"><label
                 for="mail">Send Us an
                 email <ion-icon name="mail-unread-outline" class="footer-mail"></ion-icon>
@@ -334,7 +345,6 @@
     </footer>
   </main>
   <!-- End Main -->
-
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="js/script.js"></script>

@@ -114,6 +114,7 @@ Instead, 1rem = 1rem = 16px */
   }
 
 
+
 }
 
 /* ************************* */
@@ -133,6 +134,8 @@ Instead, 1rem = 1rem = 16px */
   .section-how {
     padding-left: 2rem;
   }
+
+
 
 }
 
@@ -271,9 +274,21 @@ Instead, 1rem = 1rem = 16px */
   }
 
   .step-img {
-    width: 15rem;
-    height: 30rem;
+    max-width: 40%;
+    max-height: 40%;
     border-radius: 8px;
+  }
+
+  .heading-secondary-cards {
+    font-size: 2.6rem;
+  }
+
+  .heading-secondary-pricing {
+    font-size: 2.6rem;
+  }
+
+  .margin-bottom {
+    margin-bottom: 2rem;
   }
 }
 
