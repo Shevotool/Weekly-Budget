@@ -346,7 +346,7 @@ input[type="number"] {
 }
 
 .budget-input {
-  width: 30rem;
+  width: 34rem;
 }
 
 /* ************************* */
@@ -396,4 +396,21 @@ button:disabled {
   margin: 0 auto;
   margin-top: -16rem;
   height: 30rem;
+}
+
+/* ************************* */
+/* Clear btn */
+/* ************************* */
+
+.clear {
+  position: absolute;
+  left: 65%;
+  margin-top: 1rem;
+}
+
+.clear-btn {
+  background-color: var(--green-card);
+  font-size: 1.2rem;
+  margin-bottom: 4rem;
+  color: var(--white-color) !important;
 }

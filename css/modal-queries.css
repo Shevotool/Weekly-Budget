@@ -174,6 +174,27 @@ Instead, 1rem = 1rem = 16px */
     grid-template-columns: 1fr;
   }
 
+  .clear {
+    position: absolute;
+    left: 56%;
+    margin-top: -10.6rem;
+  }
+
+  .clear-btn {
+    background-color: var(--green-card);
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+    width: 14rem;
+    height: 7.6rem;
+    color: var(--white-color) !important;
+  }
+
+  .btn-primary {
+    margin-left: 1rem;
+  }
+
+
+
 }
 
 /*     -FONT SIZE SYSTEM (px) 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */

@@ -4,6 +4,9 @@
 const formulario = document.querySelector("#agregar-gasto");
 const gastoListado = document.querySelector("#gastos ul");
 const budgetBtn = document.querySelector("#budget");
+const clearBtn = document.querySelector("#clear");
+document.querySelector("#total").textContent = "0";
+document.querySelector("#restante").textContent = "0";
 
 // Eventos
 eventListeners();
@@ -14,6 +17,11 @@ function eventListeners() {
     e.preventDefault();
     openModal();
   });
+
+  clearBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    clearForm();
+  });
 }
 
 // Classes
@@ -22,6 +30,11 @@ class Presupuesto {
     this.presupuesto = Number(presupuesto);
     this.restante = Number(presupuesto);
     this.gastos = [];
+  }
+
+  reiniciarGastos() {
+    this.gastos = [];
+    this.restante = this.presupuesto;
   }
 
   nuevoGasto(gasto) {
@@ -40,6 +53,8 @@ class Presupuesto {
   eliminarGasto(id) {
     this.gastos = this.gastos.filter((gasto) => gasto.id !== id);
     this.calcularRestante();
+
+    localStorage.setItem("presupuesto", JSON.stringify(this));
   }
 }
 
@@ -100,12 +115,12 @@ class IU {
       const btnBorrar = document.createElement("button");
       btnBorrar.classList.add("btn", "btn-danger", "borrar-gasto");
       btnBorrar.innerHTML = "Delete &times";
-      btnBorrar.onclick = () => {
-        eliminarGasto(id);
-      };
 
-      budgetBtn.onclick = () => {
-        eliminarGasto(id);
+      btnBorrar.onclick = () => {
+        presupuesto.eliminarGasto(id);
+        this.mostrarGastos(presupuesto.gastos, presupuesto);
+        ui.actualizarRestante(presupuesto.restante);
+        ui.comprobarPresupuesto(presupuesto);
       };
 
       nuevoGasto.appendChild(btnBorrar);
@@ -152,7 +167,23 @@ class IU {
 
 // Instanciar
 const ui = new IU();
-let presupuesto;
+let presupuesto = new Presupuesto(0);
+
+// Local storage
+const presupuestoGuardado = localStorage.getItem("presupuesto");
+if (presupuestoGuardado) {
+  const presupuestoParseado = JSON.parse(presupuestoGuardado);
+  presupuesto = new Presupuesto(presupuestoParseado.presupuesto);
+  presupuesto.restante = presupuestoParseado.restante;
+  presupuesto.gastos = presupuestoParseado.gastos;
+
+  ui.insertarPresupuesto(presupuesto);
+  ui.mostrarGastos(presupuesto.gastos, presupuesto);
+  ui.actualizarRestante(presupuesto.restante);
+  ui.comprobarPresupuesto(presupuesto);
+} else {
+  presupuesto = {};
+}
 
 // Funciones
 let popupAparecido = false;
@@ -186,6 +217,14 @@ function alertaPopup() {
   }, 2000);
 }
 
+function eliminarGastosAnteriores() {
+  // Eliminar gastos del local storage
+  localStorage.removeItem("presupuesto");
+
+  // Eliminar gastos del HTML
+  ui.limpiarHTML();
+}
+
 // Modal Preguntar presupuesto
 function openModal() {
   const modal = document.querySelector("#myModal");
@@ -209,11 +248,13 @@ function openModal() {
     if (budgetInput.value === "" || budgetInput.value <= 0) {
       alertaPopup();
     } else {
-      presupuesto = new Presupuesto(presupuestoUsuario);
-      // console.log(presupuesto);
+      // Eliminar los gastos al recargar
+      eliminarGastosAnteriores();
 
+      presupuesto = new Presupuesto(presupuestoUsuario);
       ui.insertarPresupuesto(presupuesto);
       modal.style.display = "none";
+      eliminarGastosAnteriores();
     }
   };
 
@@ -236,16 +277,14 @@ function agregarGasto(e) {
 
   // Validar
   if (nombre === "" || cantidad === "") {
-    ui.imprimirAlerta("Both files are required.", "error");
-
+    ui.imprimirAlerta("Both fields are required.", "error");
     return;
   } else if (cantidad <= 0 || isNaN(cantidad)) {
-    ui.imprimirAlerta("Invalid quantity.", "error");
-
-    return;
+    ui.imprimirAlerta("Invalid amount.", "error");
+    return formulario.reset();
   }
 
-  if (!presupuesto) {
+  if (!presupuesto || !(presupuesto instanceof Presupuesto)) {
     ui.imprimirAlerta("Please create a budget first.", "error");
     return formulario.reset();
   }
@@ -261,6 +300,9 @@ function agregarGasto(e) {
 
   // Agrega un nuevo gasto
   presupuesto.nuevoGasto(gasto);
+
+  // Agregar el presupuesto a local storage
+  localStorage.setItem("presupuesto", JSON.stringify(presupuesto));
 
   // Mensaje de todo bien!
   ui.imprimirAlerta("Expense added successfully.");
@@ -281,10 +323,35 @@ function eliminarGasto(id) {
   // Elimina del objeto
   presupuesto.eliminarGasto(id);
 
+  // Elimina el presupuesto a local storage
+  localStorage.setItem("presupuesto", JSON.stringify(presupuesto));
+
   // Elimina los gastos del HTML
   const { gastos, restante } = presupuesto;
   ui.mostrarGastos(gastos);
   ui.actualizarRestante(restante);
   ui.comprobarPresupuesto(presupuesto);
   formulario.querySelector('button[type="submit"]').disabled = false; // Para volver a habilitar el boton
+}
+
+function clearForm() {
+  presupuesto.gastos = []; // Vaciar el array de gastos
+  presupuesto.restante = presupuesto.presupuesto; // Reiniciar el restante al valor original
+  ui.actualizarRestante(presupuesto.restante);
+  ui.mostrarGastos(presupuesto.gastos); // Mostrar los gastos vacíos en el UI
+  ui.comprobarPresupuesto(presupuesto);
+  formulario.reset();
+  document.querySelector("#total").textContent = "0";
+  document.querySelector("#restante").textContent = "0";
+
+  // Restablecer el presupuesto a cero
+  presupuesto.restante = 0;
+
+  // Eliminar el presupuesto del localStorage
+  localStorage.removeItem("presupuesto");
+
+  const cantidad = Number(document.querySelector("#cantidad").value);
+  if (cantidad <= 0 || isNaN(cantidad)) {
+    return;
+  }
 }

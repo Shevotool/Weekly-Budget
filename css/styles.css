@@ -204,6 +204,7 @@ video {
   margin-top: 4rem;
   border-radius: 4rem;
   box-shadow: var(--box-shadow);
+  border: 6px solid #333333;
 }
 
 
