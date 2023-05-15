@@ -1,0 +1,53 @@
+{
+  "name": "Money Mate",
+  "short_name": "Money Mate",
+     "id": "/budget.html",
+  "start_url": "/budget.html",
+  "display": "standalone",
+  "background_color": "#18A0FB",
+  "theme_color": "#18A0FB",
+  "orientation": "portrait",
+  "icons": [
+      {
+      "src": "assets/Money-Mate-72.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+      {
+      "src": "assets/Money-Mate-120.png",
+      "type": "image/png",
+      "sizes": "120x120"
+    },
+      {
+      "src": "assets/Money-Mate-128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+      {
+      "src": "assets/Money-Mate-144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "assets/Money-Mate-152.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+      {
+      "src": "assets/Money-Mate-196.png",
+      "type": "image/png",
+      "sizes": "196x196"
+    },
+      {
+      "src": "assets/Money-Mate-256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+     {
+      "src": "assets/Money-Mate-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ]
+}

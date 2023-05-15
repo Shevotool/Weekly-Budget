@@ -135,8 +135,16 @@ h2 {
 }
 
 .badge-pill {
-  padding: 1rem;
+  background-color: var(--blue-card);
 }
+
+.badge-primary {
+  padding: 1rem;
+  border-radius: 1.6rem;
+  background-color: var(--blue-card);
+}
+
+
 
 .list-group-item {
   font-size: 2rem;
@@ -213,7 +221,6 @@ h2 {
   top: 0;
   right: -12rem;
 }
-
 
 
 
