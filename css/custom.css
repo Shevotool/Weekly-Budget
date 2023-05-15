@@ -392,7 +392,7 @@ button:disabled {
 
 .logo {
   position: absolute;
-  top: 6rem;
+  top: -4rem;
   left: 20rem;
   padding-bottom: 0;
 
@@ -401,8 +401,8 @@ button:disabled {
 .logo img {
   /*   display: block; */
   margin: 0 auto;
-  margin-top: -16rem;
-  height: 30rem;
+  width: 40rem;
+  padding-bottom: 0;
 }
 
 /* ************************* */

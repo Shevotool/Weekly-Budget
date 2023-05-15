@@ -20,6 +20,10 @@ Instead, 1rem = 1rem = 16px */
     right: 12rem;
   }
 
+  .logo img {
+    display: none;
+  }
+
 }
 
 /* ************************* */
@@ -106,6 +110,9 @@ Instead, 1rem = 1rem = 16px */
     right: -10rem;
   }
 
+  .logo {
+    left: 5rem;
+  }
 }
 
 /* ************************* */
@@ -169,8 +176,8 @@ Instead, 1rem = 1rem = 16px */
 
   .logo {
     position: absolute;
-    top: 7rem;
-    left: 1rem;
+    top: -7rem;
+    left: -4rem;
     padding-bottom: 0;
 
   }
@@ -178,8 +185,8 @@ Instead, 1rem = 1rem = 16px */
   .logo img {
     /*   display: block; */
     margin: 0 auto;
-    margin-top: -16rem;
-    height: 30rem;
+    margin-top: 0rem;
+    height: 25rem;
   }
 
   .row {
