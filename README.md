@@ -1,4 +1,4 @@
-# Weekly-Budget  ![Badge Developing](https://img.shields.io/badge/STATUS-%20DEVELOPING-green)
+# Money-Mate  ![Badge Developing](https://img.shields.io/badge/STATUS-%20DEVELOPING-green)
 
 
 ## Table of Contents
