@@ -144,11 +144,23 @@ h2 {
   background-color: var(--blue-card);
 }
 
+.check {
+  background-color: #333;
+  width: 4rem;
+  height: 4rem;
+}
+
 
 
 .list-group-item {
   font-size: 2rem;
   font-weight: 500;
+}
+
+.pagos-text {
+  color: red;
+  font-size: 16px;
+  /* ... */
 }
 
 /* ************************* */
